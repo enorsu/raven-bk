@@ -10,10 +10,12 @@ buildscript {
     }
     dependencies {
         classpath 'net.minecraftforge.gradle:ForgeGradle:2.1-SNAPSHOT'
-        classpath 'com.github.jengelman.gradle.plugins:shadow:2.0.1'
+        //classpath 'com.gradleup.shadow:shadow:2.0.1'
     }
 }
-
+plugins {
+    id("com.github.johnrengelman.shadow") version "2.0.1"
+}
 apply plugin: 'com.github.johnrengelman.shadow'
 apply plugin: 'net.minecraftforge.gradle.forge'
 apply plugin: 'java'
@@ -38,7 +40,7 @@ plugins {
 
 version = "1.2"
 group = "keystrokesmod"
-archivesBaseName = "[1.8.9] BetterKeystrokes V"
+archivesBaseName = "r"
 
 minecraft {
     version = "1.8.9-11.15.1.2318-1.8.9"
